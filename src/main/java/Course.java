@@ -4,6 +4,12 @@ public class Course {
     private String name;
     private String grade;
 
+    public double getTotalMerit() {
+        return totalMerit;
+    }
+
+    private double totalMerit;
+
     public int getCoursePoints() {
         return coursePoints;
     }
@@ -68,6 +74,8 @@ public class Course {
                 throw new IllegalArgumentException();
             }
         }
+
+        totalMerit = gradeMerit * coursePoints;
     }
 
     @Override

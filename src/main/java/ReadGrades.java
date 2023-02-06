@@ -2,17 +2,21 @@ import dev.personnummer.Personnummer;
 import dev.personnummer.PersonnummerException;
 
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ReadGrades {
 
+    static Path basePath = Paths.get("students/");
+
     public static ArrayList<Course> readCourses(String SSN) {
         ArrayList<Course> coursesList;
         try {
             coursesList = new ArrayList<>();
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File((new Personnummer(SSN)).format())));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(basePath.toString(), (new Personnummer(SSN)).format())));
 
             String line = bufferedReader.readLine();
             while (line != null) {
@@ -32,7 +36,7 @@ public class ReadGrades {
 
     public static void appendCourse(Course course, String SSN) throws PersonnummerException, IOException {
         try (BufferedWriter bufferedWriter = new BufferedWriter(
-                new FileWriter(new File(new Personnummer(SSN).format())))) {
+                new FileWriter(new File(basePath.toString(), new Personnummer(SSN).format())))) {
                 bufferedWriter.append(course.getGrade().toUpperCase()
                         + ", " +
                         course.getCoursePoints() +
@@ -52,11 +56,11 @@ public class ReadGrades {
             // Gets all the comment courses into an Arraylist. This is so this is so
             // they will be in the new saved file
 
-            bufferedReader = new BufferedReader(new FileReader(new File(student.getSSN())));
+            bufferedReader = new BufferedReader(new FileReader(new File(basePath.toString(), student.getSSN())));
             String line = bufferedReader.readLine();
             while (line != null){
                 if (line.contains("#")){
-                    commentCourses.add(line);
+                    commentCourses.add(line + "\n");
                 }
                 line = bufferedReader.readLine();
             }
@@ -65,10 +69,10 @@ public class ReadGrades {
         }
         // Write the courses to file
         try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(student.getSSN())));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(basePath.toString(), student.getSSN())));
             for (Course course : student.getCourses()
                  ) {
-                bufferedWriter.write(course.getName() +
+                bufferedWriter.write(course.getName().toUpperCase() +
                         ", "
                         + course.getCoursePoints() +
                         ", "

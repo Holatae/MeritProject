@@ -30,18 +30,28 @@ public class Cli {
             }
         } catch (RuntimeException | PersonnummerException e) {
             throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
-    private void loginToStudent() throws PersonnummerException {
+    private void loginToStudent() throws PersonnummerException, IOException {
         System.out.println("What's the students SSN");
         Student student = new Student(scanner.next(), null);
-        mainStudentCLI(student);
+        firstTimeRun(student);
     }
 
     private void createNewStudent() throws PersonnummerException, IllegalArgumentException{
         System.out.println("What's the students SSN");
         Student student = new Student(scanner.next(), null);
+    }
+
+    private void firstTimeRun(Student student) throws PersonnummerException, IOException {
+        for (Course course : ReadGrades.readCourses(student.getSSN())
+             ) {
+            student.addCourse(course);
+        }
+        mainStudentCLI(student);
     }
     private void mainStudentCLI(@NotNull Student student){
         while (true) {

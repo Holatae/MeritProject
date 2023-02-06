@@ -5,17 +5,12 @@ import dev.personnummer.*;
 
 public class Student {
     private String SSN;
-    private ArrayList<Course> courses;
+    private ArrayList<Course> courses = new ArrayList<>();
 
     public Student(String SSN, ArrayList<Course> courses) throws PersonnummerException {
-        if (!Personnummer.valid(SSN)) { throw new IllegalArgumentException();}
-        this.SSN = SSN;
-
-        File file = new File(new Personnummer(SSN).format());
-        if(file.exists()){
-            this.courses = ReadGrades.readCourses(SSN);
-        }
-        else{
+        this.SSN = new Personnummer(SSN).format();
+        File file = new File("students", SSN);
+        if(!file.exists()){
             try {
                 file.createNewFile();
             } catch (IOException e) {
