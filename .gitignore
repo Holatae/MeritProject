@@ -33,7 +33,7 @@ build/
 
 students/
 
-.idea/
+.idea/*
 
 ### VS Code ###
 .vscode/

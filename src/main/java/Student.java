@@ -9,7 +9,7 @@ public class Student {
 
     public Student(String SSN, ArrayList<Course> courses) throws PersonnummerException {
         this.SSN = new Personnummer(SSN).format();
-        File file = new File("students", SSN);
+        File file = new File("students", this.SSN);
         if(!file.exists()){
             try {
                 file.createNewFile();
