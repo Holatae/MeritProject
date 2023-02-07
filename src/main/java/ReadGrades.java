@@ -46,29 +46,31 @@ public class ReadGrades {
      * <p>just appends the course to the file. It is recommended to add the course to the student
      * and then save it later</p>
      * @deprecated
-     * @param course
-     * @param SSN
-     * @throws PersonnummerException
-     * @throws IOException
+     * @param course The course you want to append to a student
+     * @param SSN Social security number of the student you want to append the course to
+     * @throws PersonnummerException If the SSN is invalid an exception is thrown
+     * @throws IOException If it cannot open and or save the file for some reason this exception is thrown
      */
     public static void appendCourse(Course course, String SSN) throws PersonnummerException, IOException {
         try (BufferedWriter bufferedWriter = new BufferedWriter(
                 new FileWriter(new File(basePath.toString(), new Personnummer(SSN).format())))) {
-                bufferedWriter.append(course.getGrade().toUpperCase()
-                        + ", " +
-                        course.getCoursePoints() +
-                        ", " +
-                        course.getGrade());
+                bufferedWriter.append(course.getGrade().toUpperCase()).append(", ").append(String.valueOf(course.getCoursePoints())).append(", ").append(course.getGrade());
         }
 
 
 
     }
 
+    /**
+     * @param student the student you want to save
+     * @throws RuntimeException
+     * <p>This function saves the student to a file with the same name as the Student SSN
+     * in the "students/" folder</p>
+     */
     public static void saveStudentToFile(Student student) {
         Logger logger = Logger.getLogger(ReadGrades.class.getName());
         ArrayList<String> commentCourses = new ArrayList<>();
-        BufferedReader bufferedReader = null;
+        BufferedReader bufferedReader;
         try {
             // Gets all the comment courses into an Arraylist. This is so this is so
             // they will be in the new saved file

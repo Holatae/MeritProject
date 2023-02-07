@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="82afb34b-a0ec-47f6-a5b0-bb7d3b229bab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ReadGrades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReadGrades.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ReadGradesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ReadGradesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="JUnit.RUN ALL TEST">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MeritProject" />
@@ -87,7 +85,18 @@
       <module name="MeritProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CourseTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RUN ALL TEST" type="JUnit" factoryName="JUnit">
+      <module name="MeritProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,6 +105,7 @@
       <module name="MeritProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ReadGradesTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,6 +125,7 @@
       <module name="MeritProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,6 +141,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.RUN ALL TEST" />
+      <item itemvalue="JUnit.CourseTest" />
+      <item itemvalue="JUnit.ReadGradesTest" />
+      <item itemvalue="JUnit.ReadGradesTest.saveStudentToFile" />
+      <item itemvalue="JUnit.StudentTest" />
+      <item itemvalue="JUnit.StudentTest.createStudentWithoutLegalSSN" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StudentTest.createStudentWithoutLegalSSN" />
@@ -151,7 +171,7 @@
       <workItem from="1675403918334" duration="1065000" />
       <workItem from="1675405019905" duration="7243000" />
       <workItem from="1675426382095" duration="21283000" />
-      <workItem from="1675758662750" duration="1065000" />
+      <workItem from="1675758662750" duration="1928000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1675618946542</created>
@@ -188,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675686303650</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added javadoc to maven and a few comments">
+      <created>1675765770296</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675765770296</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +238,8 @@
     <MESSAGE value="Fixed a bug" />
     <MESSAGE value="Intellij specific files" />
     <MESSAGE value="Ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignore" />
+    <MESSAGE value="Added javadoc to maven and a few comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added javadoc to maven and a few comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
