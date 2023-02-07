@@ -28,9 +28,7 @@ public class Cli {
                 }
                 default -> throw new RuntimeException();
             }
-        } catch (RuntimeException | PersonnummerException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (RuntimeException | PersonnummerException | IOException e) {
             throw new RuntimeException(e);
         }
     }

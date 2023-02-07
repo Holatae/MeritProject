@@ -31,8 +31,6 @@ class ReadGradesTest {
 
         } catch (PersonnummerException e) {
             throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
 
     }

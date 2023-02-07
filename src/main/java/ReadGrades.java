@@ -8,10 +8,18 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @version 1: THIS CLASS NAME WILL BE CHANGED TO SOMETHING ELSE LATER
+ */
 public class ReadGrades {
 
     static Path basePath = Paths.get("students/");
 
+    /**
+     * @param SSN
+     * <p>Reads courses from file</p>
+     * @return A List of all Courses
+     */
     public static ArrayList<Course> readCourses(String SSN) {
         ArrayList<Course> coursesList;
         try {
@@ -34,6 +42,15 @@ public class ReadGrades {
         return coursesList;
     }
 
+    /**
+     * <p>just appends the course to the file. It is recommended to add the course to the student
+     * and then save it later</p>
+     * @deprecated
+     * @param course
+     * @param SSN
+     * @throws PersonnummerException
+     * @throws IOException
+     */
     public static void appendCourse(Course course, String SSN) throws PersonnummerException, IOException {
         try (BufferedWriter bufferedWriter = new BufferedWriter(
                 new FileWriter(new File(basePath.toString(), new Personnummer(SSN).format())))) {

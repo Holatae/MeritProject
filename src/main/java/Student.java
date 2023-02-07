@@ -7,6 +7,11 @@ public class Student {
     private String SSN;
     private ArrayList<Course> courses = new ArrayList<>();
 
+    /**
+     * @param SSN
+     * @param courses if you don't currently have any courses in memory, just set it to <strong>null</strong>
+     * @throws PersonnummerException
+     */
     public Student(String SSN, ArrayList<Course> courses) throws PersonnummerException {
         this.SSN = new Personnummer(SSN).format();
         File file = new File("students", this.SSN);
@@ -39,7 +44,11 @@ public class Student {
         return courses;
     }
 
-    public void addCourse(Course course) throws PersonnummerException, IOException {
+    /**
+     * @param course the course you want to add to current student
+     * @see Course
+     */
+    public void addCourse(Course course) throws PersonnummerException {
         this.courses.add(course);
         //ReadGrades.appendCourse(course, this.getSSN());
     }
