@@ -8,7 +8,7 @@ public class Course {
         return totalMerit;
     }
 
-    private double totalMerit;
+    private final double totalMerit;
 
     public int getCoursePoints() {
         return coursePoints;

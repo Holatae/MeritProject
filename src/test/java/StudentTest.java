@@ -1,15 +1,14 @@
 import dev.personnummer.PersonnummerException;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class StudentTest {
     private final String realTestSSN = "690813-3272";
 
     @Test
-    void studentAddingCoursesTest() throws PersonnummerException, IOException {
+    void studentAddingCoursesTest() throws PersonnummerException {
         Student student = new Student(realTestSSN, null);
         student.addCourse(new Course("SVENSKA 1", 100, "A"));
         student.addCourse(new Course("PROGRAMMERING 1", 100, "E"));
@@ -20,9 +19,7 @@ class StudentTest {
 
     @Test
     void createStudentWithoutLegalSSN(){
-        assertThrows(PersonnummerException.class, () -> {
-            new Student("1111111111", null);
-        });
+        assertThrows(PersonnummerException.class, () -> new Student("1111111111", null));
     }
 
 }
