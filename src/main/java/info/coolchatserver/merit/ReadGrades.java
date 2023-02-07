@@ -1,3 +1,5 @@
+package info.coolchatserver.merit;
+
 import dev.personnummer.Personnummer;
 import dev.personnummer.PersonnummerException;
 
@@ -64,7 +66,7 @@ public class ReadGrades {
     /**
      * @param student the student you want to save
      * @throws RuntimeException
-     * <p>This function saves the student to a file with the same name as the Student SSN
+     * <p>This function saves the student to a file with the same name as the info.coolchatserver.merit.Student SSN
      * in the "students/" folder</p>
      */
     public static void saveStudentToFile(Student student) {

@@ -1,4 +1,9 @@
+package info.coolchatserver.merit;
+
 import dev.personnummer.PersonnummerException;
+import info.coolchatserver.merit.Course;
+import info.coolchatserver.merit.ReadGrades;
+import info.coolchatserver.merit.Student;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -24,8 +29,8 @@ class ReadGradesTest {
             File file = new File(basePath.toString(), realTestSSN);
 
             assertTrue(file.exists());
-            assertEquals("Course{name='SVENSKA 1', grade='A', coursePoints=100, gradeMerit=20.0}",ReadGrades.readCourses(realTestSSN).get(0).toString());
-            assertEquals("Course{name='SVENSKA 2', grade='C', coursePoints=100, gradeMerit=15.0}",ReadGrades.readCourses(realTestSSN).get(1).toString());
+            assertEquals("info.coolchatserver.merit.Course{name='SVENSKA 1', grade='A', coursePoints=100, gradeMerit=20.0}",ReadGrades.readCourses(realTestSSN).get(0).toString());
+            assertEquals("info.coolchatserver.merit.Course{name='SVENSKA 2', grade='C', coursePoints=100, gradeMerit=15.0}", ReadGrades.readCourses(realTestSSN).get(1).toString());
 
         } catch (PersonnummerException e) {
             throw new RuntimeException(e);

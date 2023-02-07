@@ -1,3 +1,5 @@
+package info.coolchatserver.merit;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,6 +8,7 @@ import dev.personnummer.*;
 public class Student {
     private final String SSN;
     private final ArrayList<Course> courses = new ArrayList<>();
+    private double extraMerit;
 
     /**
      * @param SSN Social security number
@@ -24,11 +27,26 @@ public class Student {
         }
     }
 
+    public double getExtraMerit() {
+        return extraMerit;
+    }
+
+    /**
+     * @param extraMerit how much extraMerit should be
+     * <p>Extra Merit should <strong>ONLY</strong> be set to 0, 0.5, 1, 1.5 or 2
+     *    It works with other numbers as well but those are the only extra merit you can
+     *    get in Sweden</p>
+     */
+    public void setExtraMerit(double extraMerit) {
+        this.extraMerit = extraMerit;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "SSN='" + SSN + '\'' +
                 ", courses=" + courses +
+                ", extraMerit=" + extraMerit +
                 '}';
     }
 
@@ -46,6 +64,6 @@ public class Student {
      */
     public void addCourse(Course course) throws PersonnummerException {
         this.courses.add(course);
-        //ReadGrades.appendCourse(course, this.getSSN());
+        //info.coolchatserver.merit.ReadGrades.appendCourse(course, this.getSSN());
     }
 }

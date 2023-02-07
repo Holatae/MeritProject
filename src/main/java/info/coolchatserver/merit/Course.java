@@ -1,14 +1,17 @@
+package info.coolchatserver.merit;
+
 import org.jetbrains.annotations.NotNull;
 
 public class Course {
     private String name;
     private String grade;
+    private int coursePoints;
+    private double gradeMerit;
+    private final double totalMerit;
 
     public double getTotalMerit() {
         return totalMerit;
     }
-
-    private final double totalMerit;
 
     public int getCoursePoints() {
         return coursePoints;
@@ -18,7 +21,6 @@ public class Course {
         this.coursePoints = coursePoints;
     }
 
-    private int coursePoints;
 
     public String getName() {
         return name;
@@ -44,14 +46,12 @@ public class Course {
         this.gradeMerit = gradeMerit;
     }
 
-    private double gradeMerit;
-
     public Course(@NotNull String name, int coursePoints, @NotNull String grade) {
         this.name = name;
         this.grade = grade;
         this.coursePoints = coursePoints;
 
-        switch (grade.toUpperCase()){
+        switch (grade.toUpperCase()) {
             case "A" -> {
                 this.gradeMerit = 20;
             }
@@ -80,7 +80,7 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
+        return "info.coolchatserver.merit.Course{" +
                 "name='" + name + '\'' +
                 ", grade='" + grade + '\'' +
                 ", coursePoints=" + coursePoints +

@@ -1,8 +1,8 @@
+package info.coolchatserver.merit;
+
 import dev.personnummer.PersonnummerException;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Cli {
     public void Run(){
         System.out.println("What do you wanna do today?");
         System.out.println("1. Create a student");
-        System.out.println("2. Login with to a Student");
+        System.out.println("2. Login with to a info.coolchatserver.merit.Student");
         System.out.println("3. Delete a student");
         scanner = new Scanner(System.in);
 

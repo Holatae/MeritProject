@@ -1,3 +1,6 @@
+package info.coolchatserver.merit;
+
+import info.coolchatserver.merit.Course;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,14 +43,14 @@ class CourseTest {
     }
 
     @Test
-    void courseGradeANotAbsenceTest(){
+    void courseGradeNotAbsenceTest(){
         Course course = new Course("SVENSKA 1", 100, "-");
         assertEquals(0, course.getGradeMerit());
     }
 
     @Test
     void courseGradeIllegalArgumentTest(){
-        assertThrows(NullPointerException.class, () -> {
+        assertThrows(IllegalArgumentException.class, () -> {
             Course course = new Course("SVENSKA 1", 100, null);
         });
     }
