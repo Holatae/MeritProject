@@ -8,9 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82afb34b-a0ec-47f6-a5b0-bb7d3b229bab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ReadGradesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ReadGradesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +172,7 @@
       <workItem from="1675403918334" duration="1065000" />
       <workItem from="1675405019905" duration="7243000" />
       <workItem from="1675426382095" duration="21283000" />
-      <workItem from="1675758662750" duration="2789000" />
+      <workItem from="1675758662750" duration="3074000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1675618946542</created>
@@ -225,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675766639869</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="More cleanup">
+      <created>1675770966117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675770966117</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +255,8 @@
     <MESSAGE value="Ignore" />
     <MESSAGE value="Added javadoc to maven and a few comments" />
     <MESSAGE value="Cleaned up code a litle bit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code a litle bit" />
+    <MESSAGE value="More cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="More cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
