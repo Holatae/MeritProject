@@ -13,7 +13,7 @@ class StudentTest {
 
     @Test
     void studentAddingCoursesTest() throws PersonnummerException {
-        Student student = new Student(realTestSSN, null);
+        Student student = new Student(realTestSSN);
         student.addCourse(new Course("SVENSKA 1", 100, "A"));
         student.addCourse(new Course("PROGRAMMERING 1", 100, "E"));
 
@@ -23,7 +23,7 @@ class StudentTest {
 
     @Test
     void createStudentWithoutLegalSSN(){
-        assertThrows(PersonnummerException.class, () -> new Student("1111111111", null));
+        assertThrows(PersonnummerException.class, () -> new Student("1111111111"));
     }
 
 }

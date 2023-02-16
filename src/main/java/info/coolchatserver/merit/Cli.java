@@ -35,17 +35,17 @@ public class Cli {
 
     private void loginToStudent() throws PersonnummerException, IOException {
         System.out.println("What's the students SSN");
-        Student student = new Student(scanner.next(), null);
+        Student student = new Student(scanner.next());
         firstTimeRun(student);
     }
 
-    private void createNewStudent() throws PersonnummerException, IllegalArgumentException{
+    private void createNewStudent() throws PersonnummerException{
         System.out.println("What's the students SSN");
-        Student student = new Student(scanner.next(), null);
+        Student student = new Student(scanner.next());
     }
 
-    private void firstTimeRun(Student student) throws PersonnummerException, IOException {
-        for (Course course : ReadGrades.readCourses(student.getSSN())
+    private void firstTimeRun(Student student) throws PersonnummerException {
+        for (Course course : CourseManager.readCourses(student.getSSN())
              ) {
             student.addCourse(course);
         }
@@ -70,7 +70,7 @@ public class Cli {
                         createNewCourse(student);
                     }
                     case 0 -> {
-                        ReadGrades.saveStudentToFile(student);
+                        CourseManager.saveStudentToFile(student);
                     }
                 }
             } catch (Exception e) {
@@ -80,7 +80,7 @@ public class Cli {
 
     }
 
-    private void createNewCourse(Student student) throws PersonnummerException, IOException {
+    private void createNewCourse(Student student) throws PersonnummerException {
         System.out.println("What's the course name");
         String courseName = scanner.next();
         courseName += scanner.nextLine();

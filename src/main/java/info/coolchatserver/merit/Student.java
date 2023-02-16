@@ -7,15 +7,15 @@ import dev.personnummer.*;
 
 public class Student {
     private final String SSN;
-    private final ArrayList<Course> courses = new ArrayList<>();
+    private ArrayList<Course> courses = new ArrayList<>();
     private double extraMerit;
 
     /**
      * @param SSN Social security number
-     * @param courses if you don't currently have any courses in memory, just set it to <strong>null</strong>
+     * if you don't currently have any courses in memory, just set it to <strong>null</strong>
      * @throws PersonnummerException If the SSN is invalid an exception is thrown.
      */
-    public Student(String SSN, ArrayList<Course> courses) throws PersonnummerException {
+    public Student(String SSN) throws PersonnummerException {
         this.SSN = new Personnummer(SSN).format();
         File file = new File("students", this.SSN);
         if(!file.exists()){
@@ -64,6 +64,9 @@ public class Student {
      */
     public void addCourse(Course course) throws PersonnummerException {
         this.courses.add(course);
-        //info.coolchatserver.merit.ReadGrades.appendCourse(course, this.getSSN());
+    }
+
+    public void LoadStudentFromFile(){
+        this.courses = CourseManager.readCourses(this.SSN);
     }
 }
