@@ -12,7 +12,7 @@ class StudentTest {
     private final String realTestSSN = "690813-3272";
 
     @Test
-    void studentAddingCoursesTest() throws PersonnummerException {
+    void studentAddingCoursesTest() {
         Student student = new Student(realTestSSN);
         student.addCourse(new Course("SVENSKA 1", 100, "A"));
         student.addCourse(new Course("PROGRAMMERING 1", 100, "E"));
@@ -23,7 +23,7 @@ class StudentTest {
 
     @Test
     void createStudentWithoutLegalSSN(){
-        assertThrows(PersonnummerException.class, () -> new Student("1111111111"));
+        assertThrows(IllegalArgumentException.class, () -> new Student("1111111111"));
     }
 
 }

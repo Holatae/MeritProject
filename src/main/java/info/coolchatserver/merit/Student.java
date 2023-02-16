@@ -15,8 +15,13 @@ public class Student {
      * if you don't currently have any courses in memory, just set it to <strong>null</strong>
      * @throws PersonnummerException If the SSN is invalid an exception is thrown.
      */
-    public Student(String SSN) throws PersonnummerException {
-        this.SSN = new Personnummer(SSN).format();
+    public Student(String SSN) {
+        new File("students").mkdirs();
+        try {
+            this.SSN = new Personnummer(SSN).format();
+        } catch (PersonnummerException e) {
+            throw new IllegalArgumentException(e);
+        }
         File file = new File("students", this.SSN);
         if(!file.exists()){
             try {
@@ -62,7 +67,7 @@ public class Student {
      * @param course the course you want to add to current student
      * @see Course
      */
-    public void addCourse(Course course) throws PersonnummerException {
+    public void addCourse(Course course) {
         this.courses.add(course);
     }
 

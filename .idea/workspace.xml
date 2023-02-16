@@ -3,16 +3,21 @@
   <component name="AnalysisUIOptions">
     <option name="ANALYZE_INJECTED_CODE" value="false" />
   </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MeritProject:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82afb34b-a0ec-47f6-a5b0-bb7d3b229bab" name="Changes" comment="Refactor">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MeritProject_jar2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/coolchatserver/merit/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/coolchatserver/merit/Cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/coolchatserver/merit/ReadGrades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/coolchatserver/merit/CourseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/info/coolchatserver/merit/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/coolchatserver/merit/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/ReadGradesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/CourseManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/CourseManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/CourseManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/CourseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/CourseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/info/coolchatserver/merit/StudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,14 +66,15 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Victor/Dropbox/PC (2)/Documents/MeritGUIVaadin&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -88,7 +94,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CourseManagerTest.readStudentFileWithComment">
+  <component name="RunManager" selected="JUnit.RUN ALL TEST">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="info.coolchatserver.merit.Main" />
       <module name="MeritProject" />
@@ -122,13 +128,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentTest.studentAddingCoursesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MeritProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="info.coolchatserver.merit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="info.coolchatserver.merit" />
+      <option name="MAIN_CLASS_NAME" value="info.coolchatserver.merit.StudentTest" />
+      <option name="METHOD_NAME" value="studentAddingCoursesTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.RUN ALL TEST" />
+      <item itemvalue="JUnit.StudentTest.studentAddingCoursesTest" />
       <item itemvalue="JUnit.CourseManagerTest.readStudentFileWithComment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StudentTest.studentAddingCoursesTest" />
         <item itemvalue="JUnit.CourseManagerTest.readStudentFileWithComment" />
       </list>
     </recent_temporary>
@@ -150,6 +174,7 @@
       <workItem from="1675774569621" duration="2584000" />
       <workItem from="1676013818124" duration="2493000" />
       <workItem from="1676287926238" duration="762000" />
+      <workItem from="1676570338138" duration="3694000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1675618946542</created>
@@ -269,9 +294,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MeritProject$CourseTest.ic" NAME="CourseTest Coverage Results" MODIFIED="1675621666130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/MeritProject$StudentTest_studentAddingCoursesTest_and_1_more.ic" NAME="StudentTest,studentAddingCoursesTest and 1 more Coverage Results" MODIFIED="1675626465657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/MeritProject$StudentTest.ic" NAME="StudentTest Coverage Results" MODIFIED="1675627193616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/MeritProject$RUN_ALL_TEST.ic" NAME="RUN ALL TEST Coverage Results" MODIFIED="1676014294023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MeritProject$StudentTest_studentAddingCoursesTest_and_1_more.ic" NAME="StudentTest,studentAddingCoursesTest and 1 more Coverage Results" MODIFIED="1675626465657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
