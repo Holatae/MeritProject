@@ -1,3 +1,5 @@
+package info.coolchatserver.merit;
+
 import dev.personnummer.Personnummer;
 import dev.personnummer.PersonnummerException;
 
@@ -8,10 +10,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * @version 1: THIS CLASS NAME WILL BE CHANGED TO SOMETHING ELSE LATER
- */
-public class ReadGrades {
+// CourseManagers class name was generated my GPT–3, thanks:)
+public class CourseManager {
 
     static Path basePath = Paths.get("students/");
 
@@ -24,7 +24,8 @@ public class ReadGrades {
         ArrayList<Course> coursesList;
         try {
             coursesList = new ArrayList<>();
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(basePath.toString(), (new Personnummer(SSN)).format())));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(basePath.toString(),
+                    (new Personnummer(SSN)).format())));
 
             String line = bufferedReader.readLine();
             while (line != null) {
@@ -64,11 +65,11 @@ public class ReadGrades {
     /**
      * @param student the student you want to save
      * @throws RuntimeException
-     * <p>This function saves the student to a file with the same name as the Student SSN
+     * <p>This function saves the student to a file with the same name as the info.coolchatserver.merit.Student SSN
      * in the "students/" folder</p>
      */
     public static void saveStudentToFile(Student student) {
-        Logger logger = Logger.getLogger(ReadGrades.class.getName());
+        Logger logger = Logger.getLogger(CourseManager.class.getName());
         ArrayList<String> commentCourses = new ArrayList<>();
         BufferedReader bufferedReader;
         try {

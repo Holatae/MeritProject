@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact name="MeritProject:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/MeritProject_jar2</output-path>
+    <root id="root">
+      <element id="archive" name="MeritProject.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="MeritProject" />
+      </element>
+      <element id="library" level="project" name="Maven: org.jetbrains:annotations:13.0" />
+      <element id="library" level="project" name="Maven: dev.personnummer:personnummer:3.3.3" />
+    </root>
+  </artifact>
+</component>
